@@ -1,1 +1,1 @@
-Ici je partage principalement ma progression quotidienne en développement web :)
+Ici je partage principalement ma progression quotidienne en Développement Web :)
