@@ -29,3 +29,20 @@ alert(numero3);
  * *pour que ça soit mieux ordoné on le fait dans deux lignes
 */
 
+/**
+ * let chiffre = nul;
+ * *valeur vide */ 
+
+let chiffre = 5;
+let chiffre2 = 6;
+
+alert(chiffre + chiffre2);
+
+/**let number = 5;
+let number2 = "Pedro";
+
+alert(number * number2);
+* *ça va pas marcher car on peut pas multiplier un chiffre et une chaîne de caractères */
+
+let chiffre7 = 7, chiffre8 = 8;
+alert(chiffre7 * chiffre8); 
