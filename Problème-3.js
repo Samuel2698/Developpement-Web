@@ -23,8 +23,8 @@ for (i = 0; i < 30; i++) {
 for (alumno in alumnosTotales) {
 
     let resultado = `${alumnosTotales[alumno][0]}:<br>
-    ________Presentes: ${alumnosTotales[alumno][1]} <br>
-    ________Ausencias: ${30 - parseInt(alumnosTotales[alumno][1])}`;
+    ________Presentes: <b>${alumnosTotales[alumno][1]}</b> <br>
+    ________Ausencias: <b>${30 - (alumnosTotales[alumno][1])}</b>`;
 
     if (30 - alumnosTotales[alumno][1] > 18) {
         resultado+= "<b style='color: red'> Reprobado por inasistencias</b><br><br>";
