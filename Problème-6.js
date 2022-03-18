@@ -61,14 +61,6 @@ app.fermer();
 app.désinstaller();
  */
 
-app1.appInfo();
-app2.appInfo();
-app3.appInfo();
-app4.appInfo();
-app5.appInfo();
-app6.appInfo();
-app7.appInfo();
-
 document.write(`
 
     ${app1.appInfo()} <br>
