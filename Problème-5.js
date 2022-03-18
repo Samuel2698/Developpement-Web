@@ -34,13 +34,11 @@ class Portable {
 
         alert(`Photo prise avec une résolution de caméra de: ${this.resolutionDeCaméra}`);
     }
-    filmer() {
-        alert(`Filmé avec une résolution d'écran de: ${this.resolutionEcran}`);
-    }
+    
     portableInfo() {
         
         return ` 
-        Color: <b>${this.couleur}</b></br>
+        Couleur: <b>${this.couleur}</b></br>
         Poids: <b>${this.poids}</b></br>
         Taille: <b>${this.taille}</b></br>
         Resolution de Caméra: <b>${this.resolutionDeCaméra}</b></br>
