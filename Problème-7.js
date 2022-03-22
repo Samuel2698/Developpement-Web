@@ -1,7 +1,7 @@
 
 const obtenerInformacion = materia => {
 
-    materias = {
+    const materias = {
         fisica: ["Perez", "pedro", "pepito", "cofla", "maria"],
         programacion: ["Dalto",  "pedro", "juan", "pepito"],
         logica: ["Hernandez","pedro", "juan", "pepito", "cofla", "maria"],
