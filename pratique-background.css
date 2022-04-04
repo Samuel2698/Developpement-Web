@@ -1,0 +1,63 @@
+body{
+    /* background-color: rgb(10, 10, 135);
+    background-image: url(https://res.cloudinary.com/tf-lab/image/upload/w_600,h_337,c_fill,g_auto:subject,q_auto,f_auto/restaurant/a51b845b-8c77-45e4-91e5-9f852851e8df/d34f65ba-57d0-4e15-8675-b488bd90be36.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top right;
+     */
+
+     /* Tout dans un background */
+    background: rgb(10, 10, 135) url(https://res.cloudinary.com/tf-lab/image/upload/w_600,h_337,c_fill,g_auto:subject,q_auto,f_auto/restaurant/a51b845b-8c77-45e4-91e5-9f852851e8df/d34f65ba-57d0-4e15-8675-b488bd90be36.jpg)
+    no-repeat fixed top right;
+}
+
+
+
+.box{
+    /* Il faut la même taille des deux côtés */
+    width: 300px; 
+    height: 300px; 
+
+    /* Après l'image avec la fonction url() */
+    background-image: url(https://www.elcomercio.com/wp-content/uploads/2021/09/chancho.jpg);
+
+    /* Une image bien proportionné */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* Pour un look rond */
+    border-radius: 50%;
+
+    /* Pour le centrer */
+    margin: 0 auto;
+
+    /* El bouge?*/
+    background-attachment: scroll;
+}
+
+.caja{
+    width: 500px;
+    height: 500px;
+    background-image: url(https://avatarfiles.alphacoders.com/233/233498.jpg);
+    margin: 0 auto;
+    border-radius:50%;
+    margin-top: 20px;
+
+    /* El bouge? Non*/
+    background-attachment: fixed;
+}
+
+.boite{
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background-image: url(https://manga-kun.com/wp-content/uploads/2020/09/saitama-opm.jpg);
+    margin: 0 auto;
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+    
+
