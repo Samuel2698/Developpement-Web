@@ -261,6 +261,29 @@ console.log(nuevaMayuscula("tres tristes tigres"));
 //* Slice and Splice
 
 
+function frankenSplice(arr1, arr2, n) {
+  let localArray = arr2.slice();
+  for (let i = 0; i < arr1.length; i++) {
+    localArray.splice(n, 0, arr1[i]);
+    n++; //! sans le n++ le resultat sera [4, 3, 2, 1, 5, 6]
+  }
+  return localArray;
+}
+
+console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
+// [4, 1, 2, 3, 5, 6]
+
+function frankenSplice2(arr1, arr2, n) {
+  let localArray = arr2.slice();
+  localArray.splice(n, 0, ...arr1);
+  return localArray;
+}
+
+console.log(frankenSplice2([1, 2, 3], [4, 5, 6], 1));
+// [4, 1, 2, 3, 5, 6]
+
+
+
 
 
 
