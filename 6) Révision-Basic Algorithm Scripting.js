@@ -349,6 +349,29 @@ function mutacion(arr) {
 
 console.log(mutacion(["Alien", "lien"])); // true
 
+//* Chunky Monkey
+
+function chunkArrayInGroups(arr, size) {
+  let newArr = [];
+  while (arr.length > 0) {
+    newArr.push(arr.splice(0, size));
+  }
+  return newArr;
+}
+
+console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+// 0: (2) ['a', 'b']
+// 1: (2) ['c', 'd']
+
+function chunkArrayInGroups(arr, size) {
+  let newArr =[];
+  
+  while(arr.length > 0) {
+    newArr.push(arr.splice(0, size));
+  }
+  return newArr;
+}
+
 
 
 
