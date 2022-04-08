@@ -283,7 +283,71 @@ console.log(frankenSplice2([1, 2, 3], [4, 5, 6], 1));
 // [4, 1, 2, 3, 5, 6]
 
 
+//* Falsy Bouncer
 
+function bouncer(arr) {
+  return arr.filter(Boolean);
+}
+
+console.log(bouncer([7, "ate", "", false, 9]));
+// [7, 'ate', 9]
+
+function bouncer(arr) {
+  let newArray = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]) newArray.push(arr[i]);
+  }
+  return newArray;
+}
+
+bouncer([7, "ate", "", false, 9]);
+
+//* Where do I Belong
+
+function getIndexToIns(arr, num) {
+  return arr.filter(val => num > val).length;
+}
+console.log(getIndexToIns([40, 60], 50)); // 1
+
+function getIndexToIns2(arr, num) {
+  arr.sort((a, b) => a - b); //! sort() va ordonner l'arr
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= num) //! pas besoin de mettre un {} ici
+      return i;
+  }
+
+  return arr.length;
+}
+
+console.log(getIndexToIns2([33,666,77,888,4,988,55,22,887,999], 777)); // 6
+
+//* Mutations
+
+function mutation(arr) {
+  let test = arr[1].toLowerCase();
+  let target = arr[0].toLowerCase();
+  for (let i = 0; i < test.length; i++) {
+    if (target.indexOf(test[i]) < 0) return false; //! pas besoin non plus des {}
+  }
+  return true;
+}
+
+console.log(mutation(["Hey", "yeh"])); // true
+console.log(mutation(["hello", "KO"])); // false
+
+function mutacion(arr) {
+  let prueba = arr[1].toLowerCase();
+  let objetivo = arr[0].toLowerCase();
+
+  for (i = 0; i < prueba.length; i++) {
+    if (objetivo.indexOf(prueba[i]) < 0) return false;
+  }
+  return true;
+}
+
+console.log(mutacion(["Alien", "lien"])); // true
 
 
 
