@@ -363,14 +363,19 @@ console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
 // 0: (2) ['a', 'b']
 // 1: (2) ['c', 'd']
 
-function chunkArrayInGroups(arr, size) {
-  let newArr =[];
-  
-  while(arr.length > 0) {
+
+function agruparListas(arr, size) {
+  let newArr = [];
+
+  while (arr.length > 0) {
     newArr.push(arr.splice(0, size));
   }
   return newArr;
 }
+
+console.log(agruparListas(["a", "b", "c", "d"], 3));
+// 0: (3) ['a', 'b', 'c']
+// 1: ['d']
 
 
 
