@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(87, 8, 161);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 45px;
+    user-select: none; /** pour ne pas sélectionner le texte */
+}
+
+h3 {
+    font-size: 45px;
+    text-align: center;
+}
+
+h3::selection {
+    color: rgb(224, 159, 170);
+}
