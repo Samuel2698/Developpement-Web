@@ -20,6 +20,43 @@ h3 {
     text-align: center;
 }
 
-h3::selection {
+h3::selection { 
     color: rgb(224, 159, 170);
+    /* grâce à selection on peut changer la couleur 
+    quand on sélectionne un texte */
+}
+
+#p1 {
+    font-size: 31px;
+    user-select: none;
+}
+
+#p2 {
+    font-size: 31px;
+    white-space: pre-line; /*! recommandé */
+}
+
+#p3 {
+    font-size: 31px;
+    white-space: pre-wrap;
+    user-select: none;
+    
+}
+
+#p4 {
+    font-size: 31px;
+    white-space: pre-line;
+    word-spacing: 8px;
+    user-select: none;
+}
+
+#p5 {
+    font-size: 31px;
+    white-space: pre-line;
+    word-spacing: normal; /**séparatioon entre les mots*/
+}
+
+#p5::selection {
+    color: rgb(9, 137, 94);
+    background-color: aquamarine;
 }
