@@ -1,0 +1,200 @@
+$primary: rgb(248, 169, 22);
+$secondary: rgb(206, 24, 51);
+$dark: black;
+$dark_opacity: rgba($dark, .7);
+$font-size: 40px;
+$brand: 'dsc';
+
+* {
+    margin: 0 auto;
+}
+
+.main {
+    position: fixed;
+    background-image: url(https://www.divi-community.fr/wp-content/uploads/2019/04/divi-community-comment-utiliser-sass-avec-divi.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: #ffffff;
+    overflow-y: scroll;
+    font-size: 24px;
+}
+
+.main::after {
+    content: "";
+    background-color: rgb($dark, .7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+.main-content {
+    z-index: 2;
+    position: relative;
+    
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.#{$brand}-title-primary {
+    font-size: $font-size;
+    color: $primary;
+    margin-bottom: 10px;
+}
+
+.#{$brand}-title-secondary {
+    font-size: $font-size;
+    color: $secondary;
+    margin-bottom: 10px;
+}
+
+.#{$brand}-title-dark {
+    color: $dark_opacity;
+    // Nesting
+    font: {
+        size: $font-size;
+        weight: 20px;
+        family: Helvetica, sans-serif;
+    }
+    padding: {
+        top: 2px;
+        left: 2px;
+        right: 2px;
+    }
+    margin-top: 30px;
+}
+
+.#{$brand}-card {
+    width: 200px;
+    margin-top: 30px;
+    padding: 0;
+    border: {
+        radius: 5px;
+        width: 1px;
+        style: solid;
+        color: $secondary;
+    }
+    img {
+        width: 100%;
+        height: 150px;
+        display: block;
+    }
+    h1 {
+        height: 50px;
+        line-height: 50px;
+        margin: 0;
+    }
+}
+
+@mixin border-radius($radius){
+    -webkit-border-radius:$radius;
+    -moz-border-radius:$radius;
+    -ms-border-radius:$radius;
+    border-radius:$radius;
+  }
+
+  #awesome {
+    width: 150px;
+    height: 150px;
+    background-color: greenyellow;
+    filter: drop-shadow(0 0 0.75rem yellowgreen);
+    margin-top: 30px;
+        @include border-radius(15px);
+}
+
+#awesome:hover {
+    background-color: green;
+    cursor: pointer;
+}
+  
+#awesome:active {
+    background-color: pink;
+}
+
+@mixin border-stroke($val) {
+    @if $val == light {
+      border: 1px solid black;
+    }
+    @else if $val == medium {
+      border: 3px solid black;
+    }
+    @else if $val == heavy {
+      border: 6px solid black;
+    }
+    @else {
+      border: none;
+    }
+  }
+
+  #box {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    margin-top: 30px;
+    @include border-stroke(medium);
+  }
+
+#box:hover {
+    cursor: wait;
+}
+
+p {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@for $j from 1 through 5 {
+    .text-#{$j} { font-size: 15px * $j; }
+}
+
+@each $color in blue, black, red {
+    .#{$color}-bg {background-color: $color;}
+}
+  
+
+#elDiv {
+    height: 100px;
+    width: 800px;
+    text-align: center;
+}
+
+i {
+    display: flex;
+    justify-content: center;
+}
+
+$x: 1;
+@while $x < 11 {
+  .texto-#{$x} { 
+    font-size: 15px * $x;
+  }
+  //! Pour éviter une boucle infinie:
+  $x: $x + 1; 
+}
+
+h3 {
+    text-align: center;
+    margin-top: 5px;
+    color: rgb(167, 213, 250);
+  }
+  .info {
+    width: 200px;
+    border: 1px solid black;
+    margin: 0 auto;
+    white-space: pre-line;
+  }
+  .info-important {
+    @extend .info;
+    background-color: rgb(223, 161, 223);
+}  
