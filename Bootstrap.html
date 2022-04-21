@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap :)</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+    <!--* Pour ajouter Bootstrap à notre app: -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    
+    <!--* Pour inclure Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<style>
+
+  body {
+    background-color: rgb(245, 237, 244);
+  }
+
+  h2 {
+    font-family: Lobster, Monospace;
+    font-size: 45px;
+  }
+
+  .thick-green-border {
+    border-color: rgb(103, 187, 103);
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 50%;
+  }
+
+  img {
+    filter: drop-shadow(0 0 0.75rem rgb(221, 147, 203));
+  }
+
+</style>
+</head>
+
+<body>
+    
+<div class="container-fluid">
+
+    <div class="row">
+      <div class="col-xs-8">
+        <h2 class="text-primary  text-center">CatPhotoApp</h2>
+        <!-- !Grâce à text-center h2 sera au milieu -->
+      </div>
+      <div class="col-xs-4">
+        <a href="#"><img class="img-responsive thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+      </div>
+    </div>
+
+    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg" 
+    class="img-responsive"> 
+    <!--! class="img-responsive" pour que ça soit exactement la largeur de l'écran de notre portable-->
+    
+  <div class="row">
+
+    <div class="col-xs-4">
+      <!-- *Le button de Bootstrap: -->
+      <button class="btn btn-primary btn-block">
+        <i class="fas fa-thumbs-up"></i> 
+        Like</button>
+      <!-- !btn-block va étirer le button pour remplir tout l'espace horizontal de la page -->
+      <!-- *On change btn-default par btn-primary -->
+
+      <!-- btn-primay est la couleur principale qu l'on utilise dans l'app.
+      Il est utile pour mettre en évidence les actions que l'on souhaite que 
+      l'utilisateur entreprenne -->
+    </div>
+    
+    <div class="col-xs-4">
+      <button class="btn btn-block btn-info">
+        <i class="fas fa-info-circle"></i>
+        Info</button>
+      <!-- btn-info est utilisée pour attirer l'attention sur 
+      les actions facultatives que l'utilisateur peut effectuer -->
+    </div>
+   
+    <div class="col-xs-4">
+      <button class="btn btn-block btn-danger">
+        <i class="fas fa-trash"></i>
+        Effacer</button>
+      <!-- La classe btn-danger est la couleur du bouton que vous utiliserez pour informer les utilisateurs 
+      que le bouton effectue une action destructrice, telle que la suppression d'une photo de chat. -->
+    </div>
+    
+    <!--* * est un nombre spécifiant le nombre de colonnes de largeur que l'élément doit avoir. -->
+    <!--* xs signifie "extra small", donc pour un écran de téléphone portable extra-petit -->
+    <!--* Il y a en d'autres, par exemple col-md-*, où md signifie "medium" -->
+
+  </div>
+
+    <p>Ce que les chats<span class="text-danger"> adorent:</span></p>
+    <!-- donc love aura la couleur rouge de la class "text-danger" -->
+    <ul>
+      <li>herbe à chat</li>
+      <li>pointeurs laser</li>
+      <li>lasagne</li>
+    </ul>
+
+    <p>Top 3 des choses que les chats détestent:</p>
+    <ol>
+      <li>traitement contre les puces</li>
+      <li>tonnerre</li>
+      <li>autres chats</li>
+    </ol>
+
+    <form action="https://freecatphotoapp.com/submit-cat-photo">
+
+      <div class="row">
+        <div class="col-xs-6">
+          <label><input type="radio" name="indoor-outdoor">A l'interieur</label>
+        </div>
+        <div class="col-xs-6">
+          <label><input type="radio" name="indoor-outdoor">A l'exterieur</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-4">
+          <label><input type="checkbox" name="personality">Amoureux</label>   
+        </div>
+        <div class="col-xs-4">
+           <label><input type="checkbox" name="personality">Paresseux</label>
+        </div>
+        <div class="col-xs-4">
+           <label><input type="checkbox" name="personality">Fou</label>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-xs-7">
+          <input type="text" class="form-control" placeholder="cat photo URL" required>
+        </div>
+        <div class="col-xs-5">
+          <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i>Envoyer</button>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+</body>
+</html>
